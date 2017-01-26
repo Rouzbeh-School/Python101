@@ -120,14 +120,122 @@
                                 <li>Each line is a string</li>
                                 <li>Each line is terminated by \n</li>
                                 <li>Human-readable files</li>
-                                <li>Editable by text editors:
-                                    <ul>
-                                        <li>
-                                            .py files
-                                        </li>
-                                    <ul>
+                                <li>Editable by text editors</li>
+                            </ul>
+                        </div>
+                    </div>
+                </section>
+
+                <section class="slide-center">
+                    <div class="wrap content-center">
+                        <h1><strong>Binary files</strong></h1>
+                        <div class="bg-white shadow">
+                            <ul class="description">
+                                <li>int, double, float are directly as (0, 1)
+                                    stored in the file.</li>
+                                <li>Human unreadable</li>
+                                <li>.exe .mp3 .mpg .jpg are examples of binary files
                                 </li>
                             </ul>
+                        </div>
+                    </div>
+                </section>
+
+                <section class="slide-center">
+                    <div class="wrap content-center">
+                        <h1><strong>Steps to work with files in python</strong></h1>
+                        <div class="bg-white shadow">
+                            <ul class="description">
+                                <li>Specifying openning file method</li>
+                                <li>Openning file</li>
+                                <li>Getting the file handle</li>
+                                <li>Reading from file</li>
+                                <li>Writing to file</li>
+                            </ul>
+                        </div>
+                    </div>
+                </section>
+
+                <section class="slide-top">
+                    <div class="wrap">
+                        <h1>File openning methods:</h1>
+                        <div class="bg-white shadow">
+                            <ul class="description">
+                                <li>Read mode (r)</li>
+                                <li>Write mode (w)</li>
+                                <li>Append mode (a)</li>
+                                <li>Writing binary mode (wb)</li>
+                                <li>Reading binary mode (rb)</li>
+                            </ul>
+                        </div>
+                    </div>
+                </section>
+
+                <section class="slide-top">
+                    <div class="wrap">
+                        <h1>Reading from file: #1</h1>
+                        <div class="bg-white shadow">
+                            <code>
+                                infile = open('lines.txt', 'r')<br>
+                                for line in infile:<br>
+                                    print(line)
+                            </code>
+                        </div>
+                    </div>
+                </section>
+
+                <section class="slide-top">
+                    <div class="wrap">
+                        <h1>Reading from file: #2</h1>
+                        <div class="bg-white shadow">
+                            <code>
+                                buffersize = 5000<br>
+                                infile = open('lines.txt', 'r')<br>
+                                buffer = infile.read(buffersize)<br>
+                                while len(buffer):<br>
+                                print(buffer)<br>
+                                buffer = infile.read(buffersize)
+                            </code>
+                        </div>
+                    </div>
+                </section>
+
+                <section class="slide-top">
+                    <div class="wrap">
+                        <h1>Writing to file: #1</h1>
+                        <div class="bg-white shadow">
+                            <code>
+                                outfile = open('lines.txt', 'w')<br>
+                                outfile.write("Salam")
+                            </code>
+                        </div>
+                    </div>
+                </section>
+
+                <section class="slide-top">
+                    <div class="wrap">
+                        <h1>Writing to file: #2</h1>
+                        <div class="bg-white shadow">
+                            <code>
+                                outfile = open('lines.txt', 'w')<br>
+                                print("Salam", file=outfile)
+                            </code>
+                        </div>
+                    </div>
+                </section>
+
+                <section class="slide-top">
+                    <div class="wrap">
+                        <h1>Reading from binary file</h1>
+                        <div class="bg-white shadow">
+                            <code>
+                                buffersize = 5000<br>
+                                infile = open('lines.txt', 'rb')<br>
+                                buffer = infile.read(buffersize)<br>
+                                while len(buffer):<br>
+                                print(buffer)<br>
+                                buffer = infile.read(buffersize)
+                            </code>
                         </div>
                     </div>
                 </section>
